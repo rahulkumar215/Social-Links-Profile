@@ -1,0 +1,128 @@
+:root {
+  --color-green: hsl(75, 94%, 57%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-grey: hsl(0, 0%, 20%);
+  --color-dark-grey: hsl(0, 0%, 12%);
+  --color-off-black: hsl(0, 0%, 8%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: var(--color-off-black);
+
+  font-family: 'Inter', sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.profile__container {
+  background-color: var(--color-dark-grey);
+  color: var(--color-white);
+  width: 38.5rem;
+  border-radius: 1.1rem;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 4rem;
+  margin: 10rem 2rem;
+}
+
+.profile__picture-box {
+  border-radius: 50%;
+  overflow: hidden;
+
+  margin-bottom: 2.4rem;
+}
+
+.profile__picture-image {
+  width: 9rem;
+  height: 9rem;
+  object-fit: cover;
+  transform-origin: top;
+  transform: scale(1.5);
+}
+
+.profile__name{
+    font-size: 2.5rem;
+    font-weight: 600;
+
+    margin-bottom: 1rem;
+}
+
+.profile__based-in{
+    color: var(--color-green);
+    font-size: 1.4rem;
+    font-weight: 600;
+
+    margin-bottom: 2.8rem;
+}
+
+.profile__description{
+    font-size: 1.4rem;
+    font-weight: 400;
+
+    margin-bottom: 2.8rem;
+}
+
+.profile__links-box{
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+}
+
+.profile__link{
+    text-decoration: none;
+    color: var(--color-white);
+    font-size: 1.4rem;
+    font-weight: 600;
+
+    padding: 1.4rem 0;
+    border-radius: 6px;
+    background-color: var(--color-grey);
+    transition: all .2s ease;
+}
+
+.profile__link:not(:last-child){
+  margin-bottom: 1.6rem;
+}
+
+.profile__link:active{
+  background-color: var(--color-green);
+  color: #000;
+}
+
+.image-404{
+  max-width: 30rem;
+  width: 100%;
+  border-radius: 50%;
+  margin: 0 2rem;
+  box-shadow: 0 0 10rem var(--color-grey);
+}
+
+@media only screen and (max-width: 420px){
+  .profile__container{
+    padding: 3rem;
+  }
+}
